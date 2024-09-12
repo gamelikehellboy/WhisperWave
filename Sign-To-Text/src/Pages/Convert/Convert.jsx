@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const Convert = () => {
   const [showImage, setShowImage] = useState(false);
@@ -6,6 +6,29 @@ const Convert = () => {
   const [text, setText] = useState('');
   const ws = useRef(null);
   const imgRef = useRef(null);
+
+
+
+
+  useEffect(() => {
+    const runPythonScript = async () => {
+      try {
+        const response = await fetch('/run-python-script');
+        if (response.ok) {
+          console.log('Python script executed successfully');
+        } else {
+          console.error('Error executing Python script');
+        }
+      } catch (error) {
+        console.error('Error executing Python script:', error);
+      }
+    };
+
+    runPythonScript();
+  }, []);
+
+
+
 
   const startWebSocket = () => {
     ws.current = new WebSocket('ws://127.0.0.1:8000/ws/video_feed');
