@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color:rgb(34, 31, 31);
+}
+#heroHeading{
+  border-bottom: 2px solid;
+  border-radius: 4px;
+  border-image: linear-gradient(to right, #3acfd5 0%,#3a4ed5 50%, transparent 75%) 1;
+}
+#feature-card1,#feature-card2,#feature-card3{
+  background-color: rgba(255, 255, 255, 0.3);
+  width:380px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.4);
+  transform: translateX(-500%);
+}
+
+#works-container{
+  height: 200px;
+  width: 800px;
+}
+
+#footer{
+  background-image: linear-gradient(to bottom, rgb(167, 102, 55) 0%, rgb(176, 106, 52) 50%, rgb(157, 85, 33) 100%);
+}
+
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 10px; /* Height of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Round the corners of the scrollbar track */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+/* Style the scrollbar thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scrollbar thumb when hovered */
+}
+#hero-image{
+  width: 35rem;
+}
+
+@media (max-width: 640px){
+  #navbar{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    gap:20px;
+  }
+  #hero-container{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+  }
+  #how-it-works-img{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+}
+#head{
+  font-family: 'Playwrite';
+}
+#com-btn{
+  border-radius: 20px;
+  translate:0px 0px;
+  transition: translate 0.4s ease-in-out;
+}
+#com-btn:hover{
+  translate:-2px -5px;
+  transition: translate 0.4s ease-in-out;
+  box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s ease-in-out;
+}
+#home {
+  background-image: url('src/assets/Designer.png');
+  background-size: 100% auto;
+  background-position: center;
+  height: 100vh;
+}
+
+#title-container{
+  border: 2px solid black;
+  width: 1000px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: rgb(244, 242, 242,0.7);
+  /* box-shadow: 10px 10px 0px 5px rgba(0, 0, 0, 0.7); */
+  
+}
+#feat-works{
+    background-image: url('src/assets/man_speak.png');
+}
+
+#works{
+  background-color: rgb(203, 164, 78,0.89);
+  width:800px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.4);
+  transform: translateY(-900%);
+  opacity: 0;
+}
+
+@keyframes bounce {
+  0%{
+    transform: translateY(-700px);
+  }
+  16%,64%,100%{
+    transform: translateY(0);
+  }
+  32%{
+    transform: translateY(-75px);
+  }
+  80%{
+    transform: translateY(-25px);
+  }
+}
+@keyframes reveal {
+  0%{
+    min-width: 0px;
+  }
+  25%{
+    min-width: 40px;
+  }
+  50%{
+    min-width: 70px;
+  }
+  75%{
+    min-width: 100px;
+  }
+  100%{
+    min-width: 400px;
+  }
+}
+
+#heroImg{
+  animation: bounce 0.7s linear;
+  
+}
+
+
+#heroHeadText{
+  background: #121FCF;
+  background: radial-gradient(ellipse farthest-corner at bottom right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#expressText{
+  background: #3459CF;
+  background: radial-gradient(ellipse farthest-corner at center center, #3459CF 0%, #10CF2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes typing {
+  
+  from {
+    
+    width: 0;
+    
+  }
+  
+  to {
+    
+    width: 100%;
+    
+  }
+  
+}
+
+#realTime,#faEye,#datasetImg{
+  scale: 2.5;
+}
+
